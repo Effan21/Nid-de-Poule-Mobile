@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786386915491",
+    "project_id": "niddepoule-81932",
+    "storage_bucket": "niddepoule-81932.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786386915491:android:429a296d66f3aab7836f16",
+        "android_client_info": {
+          "package_name": "com.example.nid_de_poule1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786386915491-ls4tdrnt6oi20q6vbahebusom2d96c9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTyXICJfj3jX9aTfE2AQP8spqKGOD9wT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786386915491-ls4tdrnt6oi20q6vbahebusom2d96c9f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
