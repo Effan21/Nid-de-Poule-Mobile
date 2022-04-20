@@ -1,8 +1,16 @@
-import 'dart:ffi';
+
+
+
 
 import 'package:flutter/material.dart';
+import 'package:path/path.dart' as path;
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'Screens/CameraScreen.dart';
+
+
+
 class PanelWidget extends StatelessWidget {
   final ScrollController controller;
   final PanelController panelController;
@@ -17,13 +25,14 @@ class PanelWidget extends StatelessWidget {
         const SizedBox(height: 12,),
         buildDragHandle(),
         const SizedBox(height: 10,),
-        buildAboutText(),
+        buildAboutText(context),
 
       ],
     );
   }
 
-  Widget buildAboutText() =>
+  Widget buildAboutText(context) =>
+
       Container(
 
         padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -40,11 +49,16 @@ class PanelWidget extends StatelessWidget {
             ),
             const SizedBox(height: 30,),
             Center(
-              child: Container( child: TextButton(onPressed: () {  }, child: Row(
+              child: Container( child: TextButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CameraScreen()),
+                );
+              }, child: Row(
             children: [
               SizedBox(width: 20,),
            Icon(Icons.campaign_rounded, color: Colors.white,size: 30,),
-              SizedBox(width: 30,),
+              SizedBox(width: 35,),
               Text('Un nid de Poule', style: GoogleFonts.openSans(
                 textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black)
               )
@@ -63,7 +77,7 @@ class PanelWidget extends StatelessWidget {
                 child: TextButton(onPressed: () {  }, child: Row(
                   children: [SizedBox(width: 20,),
                     Icon(Icons.check_circle, color: Colors.white,size: 25,),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 35,),
                     Text('Une Réparation', style: GoogleFonts.openSans(
                         textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black)
                     )
